@@ -9,11 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    
+    @IBOutlet var dayTF: UITextField!
+    @IBOutlet var monthTF: UITextField!
+    @IBOutlet var yearTF: UITextField!
+    
+    @IBOutlet var resultLabel: UILabel!
+    
+    @IBAction func findDay(_ sender: UIButton) {
     }
-
-
 }
 
