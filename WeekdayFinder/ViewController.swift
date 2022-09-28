@@ -27,6 +27,8 @@ class ViewController: UIViewController {
                 showAlert(title: "Wrong data", message: "Input number in text field for month from 1 to 12")
             } else if intYear < 0 {
                 showAlert(title: "Wrong data", message: "Input number in text field for year greater then 0")
+            } else if intDay > 28 && intMonth == 2 {
+                showAlert(title: "Wrong data", message: "In february 28 days")
             }
         }
         
