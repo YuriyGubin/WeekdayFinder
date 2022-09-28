@@ -20,11 +20,23 @@ class ViewController: UIViewController {
         
         guard let day = dayTF.text, let month = monthTF.text, let year = yearTF.text else { return }
         
+        if let intDay = Int(day), let intMonth = Int(month), let intYear = Int(year) {
+            if intDay < 1 || intDay > 31 {
+                showAlert(title: "Wrong data", message: "Input number in text field for day from 1 to 31")
+            } else if intMonth < 1 || intMonth > 12 {
+                showAlert(title: "Wrong data", message: "Input number in text field for month from 1 to 12")
+            } else if intYear < 0 {
+                showAlert(title: "Wrong data", message: "Input number in text field for year greater then 0")
+            }
+        }
+        
         let calendar = Calendar.current
         var dateComponents = DateComponents()
         dateComponents.day = Int(day)
         dateComponents.month = Int(month)
         dateComponents.year = Int(year)
+        
+        
         
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_En")
