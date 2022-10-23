@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
     @IBOutlet var dayTF: UITextField!
     @IBOutlet var monthTF: UITextField!
     @IBOutlet var yearTF: UITextField!
@@ -34,6 +33,7 @@ class ViewController: UIViewController {
         
         let calendar = Calendar.current
         var dateComponents = DateComponents()
+        
         dateComponents.day = Int(day)
         dateComponents.month = Int(month)
         dateComponents.year = Int(year)
