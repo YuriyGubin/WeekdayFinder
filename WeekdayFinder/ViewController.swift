@@ -39,6 +39,7 @@ class ViewController: UIViewController {
         dateComponents.year = Int(year)
         
         let dateFormatter = DateFormatter()
+        
         dateFormatter.locale = Locale(identifier: "en_En")
         dateFormatter.dateFormat = "EEEE"
         
